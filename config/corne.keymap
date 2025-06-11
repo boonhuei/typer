@@ -13,7 +13,7 @@
         amin: amin {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp Y &kp Y &kp Y &kp Y &kp Y &kp Y &kp Y &kp Y &kp Y &kp Y &kp Y>;
+            bindings = <&kp Y &kp Y &kp Y &kp Y &kp Y &kp Y &kp Y &kp Y>;
             label = "AMIN";
         };
     };

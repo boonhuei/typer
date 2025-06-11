@@ -13,8 +13,29 @@
         amin: amin {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp Y &kp Y &kp Y &kp Y &kp Y &kp Y &kp Y &kp Y>;
+            bindings = <&kp LS(T) &kp EXCL &kp N4 &kp N7 &kp M &kp C &kp M &kp S &kp AT &kp D &kp M &kp I &kp N>;
             label = "AMIN";
+        };
+
+        Bi: Bi {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(B) &kp I &kp LS(B) &kp I &kp LS(O) &kp N2 &kp N2 &kp N1 &kp N0>;
+            label = "BI";
+        };
+
+        bracket: bracket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR &kp RPAR &kp LEFT>;
+            label = "BRACKET";
+        };
+
+        igt: igt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(T) &kp EXCL &kp N1 &kp G &kp T &kp W &kp I &kp N &kp A &kp C &kp C>;
+            label = "IGT";
         };
     };
 
@@ -48,7 +69,7 @@
             bindings = <
 &kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp HOME  &kp UP_ARROW  &kp END
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans    &trans        &trans
+&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &igt      &Bi           &amin
                                         &kp LGUI      &trans        &kp SPACE       &kp RET          &kp DOT          &kp KP_NUMBER_0
             >;
         };

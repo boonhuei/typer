@@ -13,14 +13,14 @@
         amin: amin {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(T) &kp EXCL &kp N4 &kp N7 &kp M &kp C &kp M &kp S &kp AT &kp D &kp M &kp I &kp N>;
+            bindings = <&kp LS(T) &kp EXCL &kp N4 &kp N7 &kp M &kp C &kp M &kp S &kp AT &kp D &kp M &kp I &kp N &kp ENTER>;
             label = "AMIN";
         };
 
         Bi: Bi {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(B) &kp I &kp LS(B) &kp I &kp LS(O) &kp N2 &kp N2 &kp N1 &kp N0>;
+            bindings = <&kp LS(B) &kp I &kp LS(B) &kp I &kp LS(O) &kp N2 &kp N2 &kp N1 &kp N0 &kp RET>;
             label = "BI";
         };
 
@@ -34,8 +34,43 @@
         igt: igt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(T) &kp EXCL &kp N1 &kp G &kp T &kp W &kp I &kp N &kp A &kp C &kp C>;
+            bindings = <&kp LS(T) &kp EXCL &kp N1 &kp G &kp T &kp W &kp I &kp N &kp A &kp C &kp C &kp RET>;
             label = "IGT";
+        };
+
+        curly: curly {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACE &kp RBRC &kp LEFT_ARROW>;
+            label = "CURLY";
+        };
+
+        dqoute: dqoute {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT>;
+            label = "DQOUTE";
+        };
+
+        squote: squote {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SQT &kp SQT &kp LEFT>;
+            label = "SQUOTE";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        ctrlaltdel {
+            bindings = <&kp LC(LA(DELETE))>;
+            key-positions = <29 37>;
+        };
+
+        alttab {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <37 28>;
         };
     };
 
@@ -69,7 +104,7 @@
             bindings = <
 &kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp HOME  &kp UP_ARROW  &kp END
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp LEFT  &kp DOWN      &kp RIGHT_ARROW
-&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &igt    &Bi        &amin
+&kp LSHFT   &trans        &trans        &trans        &trans        &trans          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &igt      &Bi           &amin
                                         &kp LGUI      &trans        &kp SPACE       &kp RET          &kp DOT          &kp KP_NUMBER_0
             >;
         };

@@ -73,14 +73,21 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        altab {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <12 36>;
+        };
+    };
 
     behaviors {
         Taptab: Taptab {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPTAB";
             #binding-cells = <0>;
-            bindings = <&kp TAB>;
+            bindings = <&kp TAB>, <&kp LA(TAB)>;
         };
     };
 

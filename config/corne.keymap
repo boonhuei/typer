@@ -111,9 +111,9 @@
 
             display-name = "Base";
             bindings = <
-&kp ESCAPE          &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&mt LEFT_SHIFT TAB  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp BSLH
-&mt LEFT_ALT LCTRL  &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
+&kp ESCAPE          &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P      &kp BSPC
+&mt LEFT_SHIFT TAB  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI   &kp BSLH
+&kp LCTRL           &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N    &kp M  &kp COMMA  &kp DOT  &kp SLASH  &kp LEFT_ALT
                                   &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp PSCRN
             >;
         };
@@ -127,10 +127,10 @@
 
             display-name = "Lower";
             bindings = <
-&kp ESC             &trans  &kp F2  &trans    &trans  &kt LA(LC(DEL))    &kp NUMBER_7  &kp N8        &kp N9        &kp DELETE  &kp UP_ARROW  &kp BACKSPACE
-&mt LEFT_SHIFT TAB  &trans  &trans  &igt      &Bi     &amin              &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT    &kp DOWN      &kp RIGHT_ARROW
-&mt LEFT_ALT LCTRL  &trans  &trans  &trans    &trans  &lmgr              &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp HOME    &Taptab       &kp END
-                                    &kp LGUI  &trans  &kp SPACE          &kp RET       &kp N0        &kp DOT
+&kp ESC             &kp LALT  &kp F2  &kp F4    &trans  &kt LA(LC(DEL))    &kp NUMBER_7  &kp N8        &kp N9        &kp DELETE  &kp UP_ARROW  &kp BACKSPACE
+&mt LEFT_SHIFT TAB  &trans    &trans  &igt      &Bi     &amin              &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT    &kp DOWN      &kp RIGHT_ARROW
+&kp LCTRL           &trans    &trans  &trans    &trans  &lmgr              &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp HOME    &Taptab       &kp END
+                                      &kp LGUI  &trans  &kp SPACE          &kp RET       &kp N0        &kp DOT
             >;
         };
 

@@ -65,6 +65,20 @@
             bindings = <&none &kp LS(T) &kp EXCL &kp N4 &kp N7 &kp M &kp C &kp L &kp M &kp G &kp R &kp RET>;
             label = "LMGR";
         };
+
+        http: http {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp H &kp T &kp T &kp P &kp COLON &kp FSLH &kp FSLH>;
+            label = "HTTP";
+        };
+
+        https: https {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH>;
+            label = "HTTPS";
+        };
     };
 
     combos {
@@ -129,10 +143,10 @@
 
             display-name = "Raise";
             bindings = <
-&kp ESC         &kp EXCL  &kp AT  &kp HASH     &kp DLLR  &kp PRCNT            &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LEFT_SHIFT  &trans    &trans  &trans       &trans    &trans               &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LCTRL       &trans    &trans  &trans       &trans    &ext_power EP_TOG    &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                                  &bootloader  &trans    &kp SPACE            &kp RET    &trans     &bootloader
+&kp ESC         &kp EXCL  &kp AT  &kp HASH     &kp DLLR  &kp PRCNT            &kp FSLH       &kp KP_MULTIPLY  &http        &https   &kp RPAR  &kp BSPC
+&kp LEFT_SHIFT  &trans    &trans  &trans       &trans    &trans               &kp MINUS      &kp PLUS         &bracket     &dqoute  &kp BSLH  &kp GRAVE
+&kp LCTRL       &trans    &trans  &trans       &trans    &ext_power EP_TOG    &kp BACKSLASH  &kp EQUAL        &curly       &squote  &kp PIPE  &kp TILDE
+                                  &bootloader  &trans    &kp SPACE            &kp RET        &trans           &bootloader
             >;
         };
     };

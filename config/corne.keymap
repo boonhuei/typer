@@ -62,22 +62,29 @@
         lmgr: lmgr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp LS(T) &kp EXCL &kp N4 &kp N7 &kp M &kp C &kp L &kp M &kp G &kp R &kp RET>;
+            bindings = <&kp LS(T) &kp EXCL &kp N4 &kp N7 &kp M &kp C &kp L &kp M &kp G &kp R &kp RET>;
             label = "LMGR";
         };
 
         http: http {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp H &kp T &kp T &kp P &kp COLON &kp FSLH &kp FSLH>;
+            bindings = <&kp H &kp T &kp T &kp P &kp COLON &kp FSLH &kp FSLH>;
             label = "HTTP";
         };
 
         https: https {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH>;
+            bindings = <&kp H &kp T &kp T &kp P &kp S &kp COLON &kp FSLH &kp FSLH>;
             label = "HTTPS";
+        };
+
+        vnc: vnc {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp C &kp O &kp S &kp M &kp O &kp V &kp N &kp C &kp RET>;
+            label = "VNC";
         };
     };
 
@@ -129,7 +136,7 @@
             bindings = <
 &kp ESC             &kp LALT  &kp F2  &kp F4    &kp F10  &kt LA(LC(DEL))    &kp NUMBER_7  &kp N8        &kp N9        &kp DELETE  &kp UP_ARROW  &kp BACKSPACE
 &mt LEFT_SHIFT TAB  &trans    &trans  &igt      &Bi      &amin              &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp LEFT    &kp DOWN      &kp RIGHT_ARROW
-&kp LCTRL           &trans    &trans  &trans    &trans   &lmgr              &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp HOME    &Taptab       &kp END
+&kp LCTRL           &trans    &trans  &vnc      &trans   &lmgr              &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp HOME    &Taptab       &kp END
                                       &kp LGUI  &trans   &kp SPACE          &kp RET       &kp N0        &kp DOT
             >;
         };
